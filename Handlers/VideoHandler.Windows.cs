@@ -3,9 +3,9 @@ using Microsoft.Maui.Handlers;
 using VideoDemos.Controls;
 using VideoDemos.Platforms.Windows;
 
-namespace VideoDemos.Handlers
+namespace MovieRatingApp.Handlers
 {
-    public partial class VideoHandler : ViewHandler<Video, MauiVideoPlayer>
+    public partial class RatingHandler : ViewHandler<Video, MauiVideoPlayer>
     {
         protected override MauiVideoPlayer CreatePlatformView() => new MauiVideoPlayer(VirtualView);
 
@@ -22,32 +22,32 @@ namespace VideoDemos.Handlers
             base.DisconnectHandler(platformView);
         }
 
-        public static void MapAreTransportControlsEnabled(VideoHandler handler, Video video)
+        public static void MapAreTransportControlsEnabled(RatingHandler handler, Video video)
         {
             handler.PlatformView?.UpdateTransportControlsEnabled();
         }
 
-        public static void MapSource(VideoHandler handler, Video video)
+        public static void MapSource(RatingHandler handler, Video video)
         {
             handler.PlatformView?.UpdateSource();
         }
 
-        public static void MapIsLooping(VideoHandler handler, Video video)
+        public static void MapIsLooping(RatingHandler handler, Video video)
         {
             handler.PlatformView?.UpdateIsLooping();
         }
 
-        public static void MapPosition(VideoHandler handler, Video video)
+        public static void MapPosition(RatingHandler handler, Video video)
         {
             handler.PlatformView?.UpdatePosition();
         }
 
-        public static void MapUpdateStatus(VideoHandler handler, Video video, object? args)
+        public static void MapUpdateStatus(RatingHandler handler, Video video, object? args)
         {
             handler.PlatformView?.UpdateStatus();
         }
 
-        public static void MapPlayRequested(VideoHandler handler, Video video, object? args)
+        public static void MapPlayRequested(RatingHandler handler, Video video, object? args)
         {
             if (args is not VideoPositionEventArgs)
                 return;
@@ -56,7 +56,7 @@ namespace VideoDemos.Handlers
             handler.PlatformView?.PlayRequested(position);
         }
 
-        public static void MapPauseRequested(VideoHandler handler, Video video, object? args)
+        public static void MapPauseRequested(RatingHandler handler, Video video, object? args)
         {
             if (args is not VideoPositionEventArgs)
                 return;
@@ -65,7 +65,7 @@ namespace VideoDemos.Handlers
             handler.PlatformView?.PauseRequested(position);
         }
 
-        public static void MapStopRequested(VideoHandler handler, Video video, object? args)
+        public static void MapStopRequested(RatingHandler handler, Video video, object? args)
         {
             if (args is not VideoPositionEventArgs)
                 return;

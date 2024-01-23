@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using MovieRatingApp.Controls;
+using MovieRatingApp.Handlers;
 using MovieRatingApp.ViewModels;
-using VideoDemos.Controls;
-using VideoDemos.Handlers;
 
 namespace MovieRatingApp
 {
@@ -24,7 +24,7 @@ namespace MovieRatingApp
 
             builder.ConfigureMauiHandlers(handlers =>
                 {
-                    handlers.AddHandler(typeof(Video), typeof(VideoHandler));
+                    handlers.AddHandler(typeof(RatingView), typeof(RatingHandler));
                 });
 
 #if DEBUG
