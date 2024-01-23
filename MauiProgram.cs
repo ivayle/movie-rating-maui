@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using MovieRatingApp.ViewModels;
+using VideoDemos.Controls;
+using VideoDemos.Handlers;
 
 namespace MovieRatingApp
 {
@@ -14,10 +16,16 @@ namespace MovieRatingApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("MaterialDesignIcons", "MaterialDesignIcons");
                 });
 
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
+
+            builder.ConfigureMauiHandlers(handlers =>
+                {
+                    handlers.AddHandler(typeof(Video), typeof(VideoHandler));
+                });
 
 #if DEBUG
             builder.Logging.AddDebug();

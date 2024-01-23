@@ -22,10 +22,11 @@
                         Text="{Binding Title}"
                         FontSize="18"
                         FontAttributes="Bold" />
-                    <Label
+                    <!--<Label
                         Grid.Column="1"
                         Text="{Binding Rating}"
-                        FontSize="18" />
+                        FontSize="18" />-->
+                    
                     <Line
                         Grid.Row="1"
                         Grid.ColumnSpan="2"
