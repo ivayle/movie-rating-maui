@@ -4,10 +4,10 @@ using PlatformView = MovieRatingApp.Platforms.MaciOS.NativeRatingView;
 using PlatformView = MovieRatingApp.Platforms.Android.NativeRatingView;
 #elif WINDOWS
 using PlatformView = MovieRatingApp.Platforms.Windows.NativeRatingView;
-#elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID)
+#elif (NETSTANDARD || !PLATFORM) || (NET8_0_OR_GREATER && !IOS && !ANDROID)
 using PlatformView = System.Object;
 #endif
-using VideoDemos.Controls;
+
 using Microsoft.Maui.Handlers;
 using MovieRatingApp.Controls;
 
@@ -23,7 +23,7 @@ namespace MovieRatingApp.Handlers
             //[nameof(Video.Position)] = MapPosition
         };
 
-        public static CommandMapper<Video, RatingHandler> CommandMapper = new(ViewCommandMapper)
+        public static CommandMapper<RatingView, RatingHandler> CommandMapper = new(ViewCommandMapper)
         {
             //[nameof(Video.UpdateStatus)] = MapUpdateStatus,
             //[nameof(Video.PlayRequested)] = MapPlayRequested,
