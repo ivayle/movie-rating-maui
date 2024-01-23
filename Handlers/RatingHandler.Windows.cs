@@ -1,6 +1,6 @@
 ﻿using Microsoft.Maui.Handlers;
 using MovieRatingApp.Controls;
-using MovieRatingApp.Platforms.MaciOS;
+using MovieRatingApp.Platforms.Windows;
 
 namespace MovieRatingApp.Handlers
 {

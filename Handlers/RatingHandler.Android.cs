@@ -1,5 +1,4 @@
-﻿#nullable enable
-using Microsoft.Maui.Handlers;
+﻿using Microsoft.Maui.Handlers;
 using MovieRatingApp.Controls;
 using MovieRatingApp.Platforms.Android;
 

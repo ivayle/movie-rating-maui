@@ -3,7 +3,7 @@ using PlatformView = MovieRatingApp.Platforms.MaciOS.NativeRatingView;
 #elif ANDROID
 using PlatformView = MovieRatingApp.Platforms.Android.NativeRatingView;
 #elif WINDOWS
-using PlatformView = VideoDemos.Platforms.Windows.MauiVideoPlayer;
+using PlatformView = MovieRatingApp.Platforms.Windows.NativeRatingView;
 #elif (NETSTANDARD || !PLATFORM) || (NET6_0_OR_GREATER && !IOS && !ANDROID)
 using PlatformView = System.Object;
 #endif

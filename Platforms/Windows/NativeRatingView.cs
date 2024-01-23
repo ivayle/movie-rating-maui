@@ -6,12 +6,11 @@ namespace MovieRatingApp.Platforms.Windows
     public class NativeRatingView : Grid, IDisposable
     {
         public NativeRatingView(RatingView virtualView)
-        {  
+        {
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
         }
     }
 }
