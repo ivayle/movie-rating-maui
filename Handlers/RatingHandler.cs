@@ -1,5 +1,5 @@
 ﻿#if IOS || MACCATALYST
-using PlatformView = VideoDemos.Platforms.MaciOS.MauiVideoPlayer;
+using PlatformView = MovieRatingApp.Platforms.MaciOS.NativeRatingView;
 #elif ANDROID
 using PlatformView = MovieRatingApp.Platforms.Android.NativeRatingView;
 #elif WINDOWS
