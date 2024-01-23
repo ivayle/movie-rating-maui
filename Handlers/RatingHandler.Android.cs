@@ -11,14 +11,22 @@ namespace MovieRatingApp.Handlers
         protected override void ConnectHandler(NativeRatingView platformView)
         {
             base.ConnectHandler(platformView);
-
-            // Perform any control setup here
         }
 
         protected override void DisconnectHandler(NativeRatingView platformView)
         {
             platformView.Dispose();
             base.DisconnectHandler(platformView);
+        }
+
+        public static void MapValue(RatingHandler handler, RatingView virtualView)
+        {
+            handler.PlatformView.Value = virtualView.Value;
+        }
+
+        public static void MapColor(RatingHandler handler, RatingView virtualView)
+        {
+            handler.PlatformView.Color = virtualView.Color;
         }
     }
 }

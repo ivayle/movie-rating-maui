@@ -28,7 +28,6 @@ namespace MovieRatingApp.ViewModels
 
         public MainViewModel()
         {
-            
         }
     }
 }

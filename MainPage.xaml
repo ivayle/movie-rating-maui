@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovieRatingApp.MainPage"
              xmlns:viewmodel="clr-namespace:MovieRatingApp.ViewModels"
-             xmlns:model="clr-namespace:MovieRatingApp.Models"
+             xmlns:models="clr-namespace:MovieRatingApp.Models"
+             xmlns:controls="clr-namespace:MovieRatingApp.Controls"
              x:DataType="viewmodel:MainViewModel">
     <CollectionView Margin="10" ItemsSource="{Binding Items}">
         <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="model:Movie">
+            <DataTemplate x:DataType="models:Movie">
                 <Grid ColumnSpacing="10">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -22,11 +23,9 @@
                         Text="{Binding Title}"
                         FontSize="18"
                         FontAttributes="Bold" />
-                    <!--<Label
-                        Grid.Column="1"
-                        Text="{Binding Rating}"
-                        FontSize="18" />-->
-                    
+                    <controls:RatingView
+                        Color="Red"
+                        Value="{Binding Rating}" />
                     <Line
                         Grid.Row="1"
                         Grid.ColumnSpan="2"

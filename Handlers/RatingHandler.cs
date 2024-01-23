@@ -17,10 +17,8 @@ namespace MovieRatingApp.Handlers
     {
         public static IPropertyMapper<RatingView, RatingHandler> PropertyMapper = new PropertyMapper<RatingView, RatingHandler>(ViewHandler.ViewMapper)
         {
-            //[nameof(Video.AreTransportControlsEnabled)] = MapAreTransportControlsEnabled,
-            //[nameof(Video.Source)] = MapSource,
-            //[nameof(Video.IsLooping)] = MapIsLooping,
-            //[nameof(Video.Position)] = MapPosition
+            [nameof(RatingView.Value)] = MapValue,
+            [nameof(RatingView.Color)] = MapColor,
         };
 
         public static CommandMapper<RatingView, RatingHandler> CommandMapper = new(ViewCommandMapper)

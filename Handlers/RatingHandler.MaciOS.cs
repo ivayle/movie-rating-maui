@@ -18,5 +18,15 @@ namespace MovieRatingApp.Handlers
             platformView.Dispose();
             base.DisconnectHandler(platformView);
         }
+
+        public static void MapValue(RatingHandler handler, RatingView virtualView)
+        {
+            handler.PlatformView.Value = virtualView.Value;
+        }
+
+        public static void MapColor(RatingHandler handler, RatingView virtualView)
+        {
+            handler.PlatformView.Color = virtualView.Color;
+        }
     }
 }
