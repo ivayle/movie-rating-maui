@@ -6,7 +6,7 @@ namespace MovieRatingApp.Handlers
 {
     public partial class RatingHandler : ViewHandler<RatingView, NativeRatingView>
     {
-        protected override NativeRatingView CreatePlatformView() => new NativeRatingView(VirtualView);
+        protected override NativeRatingView CreatePlatformView() => new NativeRatingView();
 
         protected override void ConnectHandler(NativeRatingView platformView)
         {

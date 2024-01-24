@@ -24,6 +24,7 @@
                         FontSize="18"
                         FontAttributes="Bold" />
                     <controls:RatingView
+                        Grid.Column="1"
                         Color="Red"
                         Value="{Binding Rating}" />
                     <Line

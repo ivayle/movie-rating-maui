@@ -23,10 +23,6 @@ namespace MovieRatingApp.Handlers
 
         public static CommandMapper<RatingView, RatingHandler> CommandMapper = new(ViewCommandMapper)
         {
-            //[nameof(Video.UpdateStatus)] = MapUpdateStatus,
-            //[nameof(Video.PlayRequested)] = MapPlayRequested,
-            //[nameof(Video.PauseRequested)] = MapPauseRequested,
-            //[nameof(Video.StopRequested)] = MapStopRequested
         };
 
         public RatingHandler() : base(PropertyMapper, CommandMapper)
