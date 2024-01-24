@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Handlers;
+using Microsoft.Maui.Platform;
 using MovieRatingApp.Controls;
 using MovieRatingApp.Platforms.Android;
 
@@ -26,7 +27,7 @@ namespace MovieRatingApp.Handlers
 
         public static void MapColor(RatingHandler handler, RatingView virtualView)
         {
-            handler.PlatformView.Color = virtualView.Color;
+            handler.PlatformView.Color = virtualView.Color.ToPlatform();
         }
     }
 }
